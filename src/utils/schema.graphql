@@ -1,0 +1,16 @@
+type Query {
+  forest(id: String!): Forest!
+  parcelle(id: String!): Parcelle!
+}
+
+type Forest {
+  gid: Int!
+  id: String!
+  essence: String!
+}
+
+type Parcelle {
+  gid: Int!
+  idu: String!
+  section: String!
+}

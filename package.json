@@ -1,0 +1,58 @@
+{
+  "name": "graphql-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "set NODE_ENV=dev && ts-node-dev src/index.ts",
+    "serve-prod": "tsc && node dist/index.js",
+    "codegen": "graphql-codegen --config codegen.yml",
+    "prisma-pull": "npx prisma db pull --force --schema=./prisma/deps.prisma && npx prisma db pull --force --schema=./prisma/dep.prisma",
+    "prisma-gen": "npx prisma generate --schema=./prisma/deps.prisma && npx prisma generate --schema=./prisma/dep.prisma"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix",
+    "*.{css,scss,vue}": "stylelint --fix",
+    "*": "prettier -w -u"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Private",
+  "dependencies": {
+    "@apollo/server": "^4.0.0",
+    "@faker-js/faker": "^9.1.0",
+    "@graphql-tools/mock": "^9.0.0",
+    "@graphql-tools/schema": "^10.0.0",
+    "@graphql-tools/utils": "^10.0.6",
+    "@prisma/client": "^5.2.0",
+    "@types/filesystem": "^0.0.36",
+    "@types/geojson": "^7946.0.8",
+    "@types/validator": "^13.7.7",
+    "class-validator": "^0.14.0",
+    "dotenv": "^16.0.3",
+    "file-system": "^2.2.2",
+    "graphql": "^16.6.0",
+    "graphql-geojson-scalar-types": "^0.1.0",
+    "module-alias": "^2.2.2",
+    "pg": "^8.7.1",
+    "prettier": "^3.0.3",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.1",
+    "type-graphql": "^2.0.0-beta.6",
+    "typescript": "^5.2.2",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/introspection": "^4.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-document-nodes": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@types/node": "^22.8.6",
+    "nodemon": "^3.0.1",
+    "prisma": "^5.2.0",
+    "ts-node-dev": "^2.0.0",
+    "eslint": "^9.13.0"
+  }
+}

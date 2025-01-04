@@ -1,0 +1,31 @@
+.DS_Store
+node_modules
+/dist
+ormconfig.json
+graphql.schema.json
+db_optimization.md
+prisma
+logs
+
+
+# local env files
+.env.local
+.env.dev
+.env.prod
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+gql.log
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
